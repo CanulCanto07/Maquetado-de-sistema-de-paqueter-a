@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.uacam.citasapp.ContactoController">
+   <top>
+      <ToolBar>
+         <Label text="Contacto" styleClass="toolbar-title" />
+      </ToolBar>
+   </top>
+   <center>
+      <VBox spacing="12">
+         <padding>
+            <Insets top="12" right="12" bottom="12" left="12"/>
+         </padding>
+         <Label text="Elige cómo quieres contactar y escribe un mensaje" />
+         <HBox spacing="12" alignment="CENTER_LEFT">
+            <Label text="Medio" />
+            <ChoiceBox prefWidth="220">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="En persona" />
+                     <String fx:value="Teléfono" />
+                     <String fx:value="Correo" />
+                     <String fx:value="Redes sociales" />
+                  </FXCollections>
+               </items>
+            </ChoiceBox>
+         </HBox>
+         <Label text="Mensaje" />
+         <TextArea promptText="Hola, me gustaría conocerte…" prefRowCount="8" prefWidth="560" />
+         <HBox spacing="10">
+            <ToggleButton fx:id="tbLike" text="❤ Me gusta" onAction="#marcarLike" styleClass="btn-like" prefWidth="140" />
+            <ToggleButton fx:id="tbInteres" text="★ Interesado" onAction="#marcarInteres" styleClass="btn-interest" prefWidth="160" />
+         </HBox>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox spacing="8" alignment="CENTER_RIGHT">
+         <padding>
+            <Insets top="10" right="10" bottom="10" left="10"/>
+         </padding>
+         <Button text="Cancelar" onAction="#cancelar" styleClass="btn-secondary" />
+         <Button text="Enviar solicitud" onAction="#enviar" styleClass="btn-primary" />
+      </HBox>
+   </bottom>
+</BorderPane>

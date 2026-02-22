@@ -1,0 +1,13 @@
+/* base */
+.root{ -fx-font-family: "Segoe UI","Roboto","Arial"; }
+.label.h1{ -fx-font-size: 18px; -fx-font-weight: bold; }
+
+/* top bar */
+.tool-bar{ -fx-background-color: linear-gradient(to right, #FF4E8A, #7A77FF); }
+.toolbar-title{ -fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold; }
+
+/* buttons */
+.btn-primary{ -fx-background-color: linear-gradient(#6a11cb,#2575fc); -fx-text-fill: white; -fx-background-radius: 8; }
+.btn-secondary{ -fx-background-color: #E1E4EA; -fx-text-fill:#1f2d3d; -fx-background-radius: 8; }
+.btn-like{ -fx-background-color:#FF4E8A; -fx-text-fill:white; -fx-background-radius: 18; }
+.btn-interest{ -fx-background-color:#FFB703; -fx-text-fill:white; -fx-background-radius: 18; }

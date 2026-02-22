@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.uacam.citasapp.FeedController">
+   <top>
+      <ToolBar>
+         <Label text="Citas cercanas" styleClass="toolbar-title" />
+         <Pane HBox.hgrow="ALWAYS" />
+         <Button text="Filtros" onAction="#abrirFiltros" styleClass="btn-secondary"/>
+         <Button text="Mensajes" onAction="#abrirBandeja" styleClass="btn-secondary"/>
+         <Button text="Perfil" onAction="#abrirPerfil" styleClass="btn-secondary"/>
+      </ToolBar>
+   </top>
+   <center>
+      <VBox>
+         <ListView fx:id="lvPersonas" VBox.vgrow="ALWAYS" prefWidth="600" prefHeight="480" />
+         <!-- Opcional: botones emocionales debajo -->
+         <!--
+         <HBox alignment="CENTER_RIGHT" spacing="10" padding="10">
+            <Button text="❤ Me gusta" styleClass="btn-like" prefWidth="140" />
+            <Button text="★ Interesado" styleClass="btn-interest" prefWidth="160" />
+         </HBox>
+         -->
+      </VBox>
+   </center>
+</BorderPane>

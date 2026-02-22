@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.uacam.citasapp.Registro_inicialController">
+   <top>
+      <ToolBar>
+         <Label text="CitasApp" styleClass="toolbar-title" />
+         <Pane HBox.hgrow="ALWAYS" />
+         <Button text="Aviso de privacidad" onAction="#abrirAvisoPrivacidad" styleClass="btn-secondary" prefWidth="160"/>
+      </ToolBar>
+   </top>
+   <center>
+      <VBox alignment="CENTER" spacing="16.0">
+         <Label text="Registro inicial" styleClass="h1" />
+         <HBox spacing="12">
+            <VBox spacing="6">
+               <Label text="Nombre (opcional)" />
+               <TextField fx:id="tfNombre" prefWidth="280" promptText="Tu nombre" />
+            </VBox>
+            <VBox spacing="6">
+               <Label text="Código postal" />
+               <TextField fx:id="tfCodigoPostal" prefWidth="280" promptText="Ej. 24000" />
+            </VBox>
+         </HBox>
+         <HBox spacing="12" alignment="CENTER_LEFT">
+            <ImageView fitHeight="96" fitWidth="96" preserveRatio="true" />
+            <VBox spacing="6">
+               <Label text="Foto de perfil" />
+               <Button text="Subir foto (mock)" styleClass="btn-secondary" prefWidth="160"/>
+            </VBox>
+         </HBox>
+         <CheckBox fx:id="cbAceptar" text="He leído y acepto el aviso de privacidad" />
+         <Button fx:id="btnContinuar" text="Continuar" onAction="#continuar" styleClass="btn-primary" prefWidth="220" prefHeight="40" />
+      </VBox>
+   </center>
+   <padding><Insets top="16" right="16" bottom="16" left="16" /></padding>
+</BorderPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25" fx:controller="com.uacam.citasapp.Aviso_privacidadController">
+   <top>
+      <ToolBar>
+         <Label styleClass="toolbar-title" text="Aviso de privacidad" />
+      </ToolBar>
+   </top>
+   <center>
+      <VBox>
+         <padding>
+            <Insets bottom="12" left="12" right="12" top="12" />
+         </padding>
+         <TextArea editable="false" prefRowCount="18" prefWidth="560" wrapText="true">
+            <text>Aquí va el aviso de privacidad de ejemplo. Proyecto realizado por: © Canul Canto Isabel Del Rosario. © Lopez Gonzalez David Concepción. © Cruz Martinez Alejandro. © Sosa Paredes Fernando Miguel.</text>
+         </TextArea>
+         <Button onAction="#aceptar" prefWidth="160" styleClass="btn-primary" text="Aceptar" />
+      </VBox>
+   </center>
+</BorderPane>

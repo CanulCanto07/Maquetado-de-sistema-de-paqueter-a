@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.uacam.citasapp.FiltrosController">
+   <top>
+      <ToolBar>
+         <Label text="Filtros de búsqueda" styleClass="toolbar-title" />
+      </ToolBar>
+   </top>
+   <center>
+      <VBox spacing="12">
+         <padding>
+            <Insets top="12" right="12" bottom="12" left="12"/>
+         </padding>
+         <HBox spacing="12">
+            <VBox spacing="6">
+               <Label text="Sexo/Género" />
+               <ChoiceBox prefWidth="240">
+                  <items>
+                     <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Cualquiera" />
+                        <String fx:value="Femenino" />
+                        <String fx:value="Masculino" />
+                        <String fx:value="No binario" />
+                     </FXCollections>
+                  </items>
+               </ChoiceBox>
+            </VBox>
+            <VBox spacing="6">
+               <Label text="Edad" />
+               <HBox spacing="6" alignment="CENTER">
+                  <Label text="18" />
+                  <Slider prefWidth="360" min="18" max="70" value="25" />
+                  <Label text="70" />
+               </HBox>
+            </VBox>
+         </HBox>
+         <TitledPane text="Intereses" expanded="true">
+            <content>
+               <FlowPane hgap="8" vgap="8">
+                  <CheckBox text="Cine" />
+                  <CheckBox text="Café" />
+                  <CheckBox text="Deportes" />
+                  <CheckBox text="Tecnología" />
+                  <CheckBox text="Lectura" />
+                  <CheckBox text="Viajes" />
+               </FlowPane>
+            </content>
+         </TitledPane>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox spacing="8" alignment="CENTER_RIGHT">
+         <padding>
+            <Insets top="10" right="10" bottom="10" left="10"/>
+         </padding>
+         <Button text="Cancelar" onAction="#cancelar" styleClass="btn-secondary" prefWidth="140" />
+         <Button text="Aplicar" onAction="#aplicar" styleClass="btn-primary" prefWidth="140" />
+      </HBox>
+   </bottom>
+</BorderPane>

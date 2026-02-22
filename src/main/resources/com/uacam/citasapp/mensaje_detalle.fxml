@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml" spacing="12" fx:controller="com.uacam.citasapp.Mensaje_detalleController">
+   <padding>
+      <Insets top="12" right="12" bottom="12" left="12"/>
+   </padding>
+   <Label text="Mensaje recibido" styleClass="h1" />
+   <TextArea editable="false" wrapText="true" prefRowCount="10" prefWidth="560">
+      <text>¡Hola! Me gustaría invitarte a tomar un café este viernes por la tarde. ¿Te animas?</text>
+   </TextArea>
+   <Label fx:id="lblContacto" text="Datos de contacto: (se muestran al aceptar)" />
+   <HBox spacing="8" alignment="CENTER_RIGHT">
+      <Button text="Rechazar" onAction="#rechazar" styleClass="btn-secondary" prefWidth="120" />
+      <Button text="Volver" onAction="#volver" styleClass="btn-secondary" prefWidth="120" />
+      <Button text="Aceptar" onAction="#aceptar" styleClass="btn-primary" prefWidth="120" />
+   </HBox>
+</VBox>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.uacam.citasapp.PerfilController">
+   <top>
+      <ToolBar>
+         <Label text="Mi perfil" styleClass="toolbar-title" />
+      </ToolBar>
+   </top>
+   <center>
+      <GridPane hgap="12" vgap="12">
+         <padding>
+            <Insets top="12" right="12" bottom="12" left="12"/>
+         </padding>
+         <columnConstraints>
+            <ColumnConstraints percentWidth="30" />
+            <ColumnConstraints percentWidth="70" />
+         </columnConstraints>
+         <Label text="Descripción" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+         <TextArea GridPane.rowIndex="0" GridPane.columnIndex="1" prefRowCount="4" prefWidth="480" />
+         <Label text="Gustos" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+         <TextField GridPane.rowIndex="1" GridPane.columnIndex="1" prefWidth="480" promptText="cine, café, senderismo…" />
+         <Label text="Hobbies" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+         <TextField GridPane.rowIndex="2" GridPane.columnIndex="1" prefWidth="480" promptText="fotografía, ciclismo…" />
+      </GridPane>
+   </center>
+   <bottom>
+      <HBox spacing="8" alignment="CENTER_RIGHT">
+         <padding>
+            <Insets top="10" right="10" bottom="10" left="10"/>
+         </padding>
+         <Button text="Volver" onAction="#volver" styleClass="btn-secondary" prefWidth="120" />
+         <Button text="Guardar" onAction="#guardar" styleClass="btn-primary" prefWidth="140" />
+      </HBox>
+   </bottom>
+</BorderPane>
